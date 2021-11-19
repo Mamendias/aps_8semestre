@@ -6,21 +6,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Usuario 
+public class Ong 
 {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-	private String login;
 	
-	public Usuario() {
+	public Ong() {
 		
 	}
 	
-	public Usuario(String nome, String login) {
+	public Ong(String nome) {
 		this.nome = nome;
-		this.login = login;
 	}
 
 	public Long getId() {
@@ -39,12 +37,5 @@ public class Usuario
 		this.nome = nome;
 	}
 
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
 
 }
